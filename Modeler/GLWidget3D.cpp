@@ -55,12 +55,8 @@ void GLWidget3D::initializeGL() {
 
 	std::vector<Vertex> vertices;
 
-	system.modelMat = glm::rotate(glm::mat4(), -3.1415926f * 0.5f, glm::vec3(1, 0, 0));
-
-	//system.generatePyramid(&renderManager);
-	//system.generateSimpleBuilding(&renderManager);
-	//system.generateBuilding(&renderManager);
-	system.generateSaltShaker2(&renderManager);
+	system.generateCurvedBox(&renderManager, glm::rotate(glm::mat4(), -3.1415926f * 0.5f, glm::vec3(1, 0, 0)));
+	//system.generate(&renderManager, glm::rotate(glm::mat4(), -3.1415926f * 0.5f, glm::vec3(1, 0, 0)));
 }
 
 /**

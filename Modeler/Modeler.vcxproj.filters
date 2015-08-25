@@ -71,10 +71,10 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CGA.cpp">
+    <ClCompile Include="GLWidget3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GLWidget3D.cpp">
+    <ClCompile Include="PM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -111,11 +111,11 @@
     <ClInclude Include="Camera.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="CGA.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="GLWidget3D.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PM.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

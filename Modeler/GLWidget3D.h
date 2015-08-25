@@ -8,7 +8,7 @@
 #include "Camera.h"
 #include "ShadowMapping.h"
 #include "RenderManager.h"
-#include "CGA.h"
+#include "PM.h"
 
 class MainWindow;
 
@@ -34,6 +34,6 @@ public:
 	RenderManager renderManager;
 	bool showWireframe;
 
-	cga::CGA system;
+	pm::PM system;
 };
 
