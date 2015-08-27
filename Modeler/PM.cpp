@@ -1,5 +1,6 @@
 ﻿#include "PM.h"
 #include "GLUtils.h"
+#include "Utils.h"
 
 namespace pm {
 
@@ -10,7 +11,14 @@ PM::~PM() {
 }
 
 void PM::generateCurvedBox(RenderManager* renderManager, const glm::mat4& modelMat) {
+	std::vector<Vertex> vertices;
 
+	for (int i = 0; i < 10000; ++i) {
+		glm::mat4 mat = glm::translate(modelMat, glm::vec3(genRand(-30, 30), genRand(-30, 30), genRand(-30, 30)));
+		glutils::drawQuad(5, 5, glm::vec3(1, 1, 1), mat, vertices);
+	}
+	
+	renderManager->addObject("object", "", vertices);
 }
 
 void PM::generate(RenderManager* renderManager, const glm::mat4& modelMat) {

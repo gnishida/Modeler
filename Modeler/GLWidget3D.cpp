@@ -19,7 +19,11 @@ GLWidget3D::GLWidget3D(QWidget *parent) : QGLWidget(QGLFormat(QGL::SampleBuffers
  * This event handler is called when the mouse press events occur.
  */
 void GLWidget3D::mousePressEvent(QMouseEvent *e) {
+	renderManager.intersectObjects(glm::vec2((float)e->x() / width() * 2.0f - 1.0f, (float)e->y() / height() * -2.0f + 1.0f), camera.mvpMatrix);
+
 	camera.mousePress(e->x(), e->y());
+
+	updateGL();
 }
 
 /**
