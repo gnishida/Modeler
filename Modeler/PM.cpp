@@ -17,7 +17,7 @@ void PM::generateCurvedBox(RenderManager* renderManager, const glm::mat4& modelM
 		glm::mat4 mat = glm::translate(modelMat, glm::vec3(genRand(-30, 30), genRand(-30, 30), genRand(-30, 30)));
 		glutils::drawQuad(5, 5, glm::vec3(1, 1, 1), mat, vertices);
 	}
-	
+
 	renderManager->addObject("object", "", vertices);
 }
 
