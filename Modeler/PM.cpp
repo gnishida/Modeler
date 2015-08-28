@@ -11,14 +11,17 @@ PM::~PM() {
 }
 
 void PM::generateCurvedBox(RenderManager* renderManager, const glm::mat4& modelMat) {
-	std::vector<Vertex> vertices;
 
-	for (int i = 0; i < 10000; ++i) {
+	for (int i = 0; i < 100; ++i) {
 		glm::mat4 mat = glm::translate(modelMat, glm::vec3(genRand(-30, 30), genRand(-30, 30), genRand(-30, 30)));
+	
+		std::vector<Vertex> vertices;
 		glutils::drawQuad(5, 5, glm::vec3(1, 1, 1), mat, vertices);
+
+		QString name = QString("object%1").arg(i);
+		renderManager->addObject(name, "", vertices);
 	}
 
-	renderManager->addObject("object", "", vertices);
 }
 
 void PM::generate(RenderManager* renderManager, const glm::mat4& modelMat) {
